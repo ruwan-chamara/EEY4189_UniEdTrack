@@ -1,14 +1,16 @@
-import express from "express"
-import {connectDB} from "./config/db.js"
-import dotenv from "dotenv"
-
-dotenv.config()
+const express = require("express");
+const cors = require("cors");
+const connectDB = require('./db');
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
+app.use(express.json());
+app.use(cors());
 
-connectDB()
+connectDB();
 
-app.listen(5001,()=>{
-    console.log("Server start on PORT:5001");
-})
+app.use('/', authRoutes);
 
+app.listen(3001, () => {
+    console.log("Server is running");
+});
