@@ -17,7 +17,7 @@ const forgotPassword = async (req, res) => {
         await User.findByIdAndUpdate({ _id: user._id }, { password: hashedPassword });
         
         // normal pass
-        // await User.findByIdAndUpdate({ _id: user._id }, { password: password });
+        //await User.findByIdAndUpdate({ _id: user._id }, { password: password });
         
         return res.json({ Status: "Success" });
 
@@ -26,6 +26,7 @@ const forgotPassword = async (req, res) => {
         res.json({ Status: "Server Error" });
     }
 };
+
 
 // login
 const login = async (req, res) => {
