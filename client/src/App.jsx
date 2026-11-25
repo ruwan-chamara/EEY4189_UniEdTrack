@@ -23,7 +23,7 @@ function App() {
          
           </Routes>
           
-         <Toaster position="top-center" />
+         <Toaster position="top-right" />
 
       </BrowserRouter>
     </div>
