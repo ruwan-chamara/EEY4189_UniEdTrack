@@ -15,7 +15,7 @@ function Login() {
       .then(result => {
         console.log(result);
         if (result.data === "success") {
-          toast.success("Login Successful!");
+          toast.success("Login Successfully!");
           navigate('/dashboard');
         }else{
           toast.error("Login failed! Incorrect email or password");
