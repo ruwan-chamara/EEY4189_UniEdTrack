@@ -2,6 +2,7 @@ import bgImage from './assets/loging_background.jpg';
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -14,10 +15,15 @@ function Login() {
       .then(result => {
         console.log(result);
         if (result.data === "success") {
+          toast.success("Login Successful!");
           navigate('/dashboard');
+        }else{
+          toast.error("Login failed! Incorrect email or password");
+
         }
       })
       .catch(err => console.log(err));
+     
   };
 
   return (
