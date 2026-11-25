@@ -18,7 +18,7 @@ function Login() {
           toast.success("Login Successfully!");
           navigate('/dashboard');
         }else{
-          toast.error("Login failed! Incorrect email or password");
+          toast.error("Login failed! Invalid credentials");
 
         }
       })
