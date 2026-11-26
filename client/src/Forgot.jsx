@@ -10,13 +10,13 @@ function ForgotPassword() {
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
-  //useEffect(() => {
-  //toast('Please enter the registered email address', {
+  useEffect(() => {
+  toast('Please enter the registered email address', {
    // id: 'forgot-email-hint',
-   // icon: '📧',
-   // duration: 4000,
-  //})
-//}, [])
+    icon: '📧',
+   duration: 4000,
+  })
+}, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
