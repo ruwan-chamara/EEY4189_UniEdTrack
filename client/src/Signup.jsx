@@ -21,7 +21,7 @@ function Signup() {
     })
 
     .catch(err => console.log(err))
-   //toast.error(err.response?.data?.message || 'Registration failed')
+   toast.error(err.response?.data?.message || 'Registration failed')
 
 
     }
