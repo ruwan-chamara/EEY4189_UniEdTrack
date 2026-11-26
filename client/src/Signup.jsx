@@ -16,12 +16,12 @@ function Signup() {
     axios.post('http://localhost:3001/register', { name, email, password })
     .then(result => {
     console.log(result)
-    //toast.success('Registration successful!')
+    toast.success('Registration successful!')
     navigate('/login')
     })
 
     .catch(err => console.log(err))
-   // toast.error(err.response?.data?.message || 'Registration failed')
+   //toast.error(err.response?.data?.message || 'Registration failed')
 
 
     }
