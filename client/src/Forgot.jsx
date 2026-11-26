@@ -1,13 +1,22 @@
 
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast'
 
 function ForgotPassword() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
+
+  //useEffect(() => {
+  //toast('Please enter the registered email address', {
+   // id: 'forgot-email-hint',
+   // icon: '📧',
+   // duration: 4000,
+  //})
+//}, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
