@@ -13,7 +13,7 @@ function ForgotPassword() {
   useEffect(() => {
   toast('Please enter the registered email address', {
   id: 'forgot-email-hint',
-    icon: '📧',
+  //icon: '📧',
    duration: 4000,
   })
 }, [])
